@@ -6,7 +6,7 @@ function CardSection(): JSX.Element {
     <div className={s.container}>
       <div className={s.cardPreviewBackground} />
       <CardPreview
-        isValid={false}
+        isValid={true}
         cardNumber="1234567812345678"
         name="FELIPE B A PIO NT"
         expirationDate="06/26"

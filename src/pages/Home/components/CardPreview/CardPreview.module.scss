@@ -90,7 +90,11 @@
 .footerSection {
   display: grid;
   grid-template-columns: 1fr auto;
-  row-gap: 18px;
+  row-gap: 38px;
+
+  @include mobile {
+    row-gap: 18px;
+  }
 }
 
 .cardNumber,

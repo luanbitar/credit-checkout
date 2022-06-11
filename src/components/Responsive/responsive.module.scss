@@ -1,0 +1,15 @@
+.desktopShow {
+  display: block;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.mobileShow {
+  display: none;
+
+  @include mobile {
+    display: block;
+  }
+}

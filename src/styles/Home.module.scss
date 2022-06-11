@@ -29,8 +29,16 @@
 }
 
 .title a {
-  color: #0070f3;
+  color: $accent-green;
   text-decoration: none;
+
+  @include mobile {
+    color: red;
+  }
+
+  @include tablet {
+    color: blue;
+  }
 }
 
 .title a:hover,

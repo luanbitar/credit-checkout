@@ -1,0 +1,11 @@
+@import "styles/rupture";
+@import "styles/variables.module.scss";
+
+$colortest: black;
+$rupture: map-merge(
+  $rupture,
+  (
+    mobile-cutoff: 768px,
+    desktop-cutoff: 1366px,
+  )
+);

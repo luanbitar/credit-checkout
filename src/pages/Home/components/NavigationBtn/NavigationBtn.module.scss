@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  align-items: center;
+  padding: 50px 8px 10px;
+  background-color: $accent-green;
+  cursor: pointer;
+
+  @include mobile {
+    padding: 38px 20px 10px;
+  }
+  @include tablet {
+    padding: 38px 20px 10px;
+  }
+}
+
+.label {
+  color: $font-alternative-color;
+  padding-left: 11px;
+  font-size: 13px;
+  line-height: 16px;
+
+  @include mobile {
+    flex: 1;
+    text-align: center;
+  }
+  @include tablet {
+    flex: 1;
+    text-align: center;
+  }
+}

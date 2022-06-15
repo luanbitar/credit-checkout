@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-column: 1 / span 2;
+  position: relative;
+  height: auto;
+  aspect-ratio: 1.662/1;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    aspect-ratio: 2.09/1;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+    aspect-ratio: 2.09/1;
+  }
+}
+
+.cardPreviewBackground {
+  background-color: $accent-green;
+  height: 100%;
+
+  @include tablet {
+    height: 50%;
+  }
+  @include mobile {
+    height: 50%;
+  }
+}

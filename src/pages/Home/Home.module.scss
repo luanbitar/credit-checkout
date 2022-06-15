@@ -1,0 +1,50 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  max-width: 1025px;
+  margin: 0 auto;
+  position: relative;
+  &::before {
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    background-color: $accent-green;
+  }
+
+  @include tablet {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+}
+
+.previewSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(3, auto) 1fr;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.fill {
+  background-color: $accent-green;
+
+  @include tablet {
+    display: none;
+  }
+  @include mobile {
+    display: none;
+  }
+}

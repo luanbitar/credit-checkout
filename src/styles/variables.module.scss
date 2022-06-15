@@ -1,6 +1,8 @@
 $accent-green: #4bde95;
 $dark-green: #308e5f;
-
-:export {
-  accentGreen: $accent-green;
-}
+$font-primary-color: #3c3c3c;
+$font-secondary-color: #c6c6c6;
+$font-accent-color: $accent-green;
+$font-alternative-color: white;
+$mobile-cutoff: 500px;
+$desktop-cutoff: 768px;

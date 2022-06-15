@@ -1,0 +1,128 @@
+.container {
+  max-width: 100%;
+  aspect-ratio: 2.1 / 1;
+  grid-column: 1 / span 2;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: 100%;
+  width: calc(100% - 10px);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 46px 46px 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include between($mobile-cutoff, 679px) {
+    transform: scale(0.9);
+  }
+  @include between(680px, $desktop-cutoff) {
+    left: 10px;
+    width: calc(100% - 20px);
+    transform: scale(0.7);
+  }
+  @include mobile {
+    left: 40px;
+    width: calc(100% - 80px);
+    padding: 30px 15px 30px;
+  }
+}
+
+.validCard {
+  background: radial-gradient(
+    73.06% 104.31% at 14.59% 58.06%,
+    #5a7589 0%,
+    #436175 33.7%,
+    #315266 57.29%,
+    #124768 100%
+  );
+}
+
+.invalidCard {
+  background: radial-gradient(
+    73.06% 104.31% at 14.59% 58.06%,
+    #bfbfbf 0%,
+    #a8a8a8 33.7%,
+    #727272 100%
+  );
+
+  .creditFlag {
+    visibility: hidden;
+  }
+}
+
+.linesBackground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 7%;
+  left: 0;
+
+  @include mobile {
+    min-width: 400px;
+    top: 0;
+  }
+  @include tablet {
+    top: 0;
+  }
+
+  svg {
+    width: 100%;
+  }
+}
+
+.creditFlag {
+  max-width: 100px;
+  max-height: 332px;
+
+  @include mobile {
+    max-width: 55px;
+    max-height: 17px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.footerSection {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 38px;
+
+  @include mobile {
+    row-gap: 18px;
+  }
+}
+
+.cardNumber,
+.name,
+.expirationDate {
+  color: $font-alternative-color;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+.cardNumber {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 32px;
+  grid-column: 1 / span 2;
+
+  @include mobile {
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+
+.name,
+.expirationDate {
+  font-size: 22px;
+  line-height: 26px;
+
+  @include mobile {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
